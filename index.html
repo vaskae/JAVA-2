@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery-2</title>
+     <link rel="stylesheet" href="css/boostrap4.0.0.css" >
+    <script src="js/jquery-2.2.4.min.js"></script>
+</head>
+
+   <style>
+    
+       .img-res{
+           width: 300px;
+           height: 200px;
+           border: 1px solid;
+       }
+    
+       .single_img{
+           margin: 10px 0;
+       }
+    
+       
+       .gallery_button {
+           
+           margin: 30px 0;
+           
+       }
+       
+       .red{
+           background: red;
+       }
+       
+         .orange{
+           background: orange;
+       }
+       
+         .green{
+           background:lightgreen;
+       }
+      
+           @media(max-width:1000px){
+               
+                .img-res{
+           width: 200px;
+           height: 150px;
+           border: 1px solid red;
+       }
+               
+       }
+    </style>
+<body>
+    <button id="dbclick">Open new window</button>
+    
+    
+    
+    <section id="gallery_button">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12 ">
+                <div class="gallery_button text-center" >
+                 <button id="btn_all">All</button>
+                  <button id="btn_webdesigne">Webdecigne</button>
+                   <button id="btn_web-devlop">Webdevlope</button>
+                   </div>   
+               </div>
+           </div>
+       </div>
+    </section>
+    
+    <section id="gallery_image">
+        <div class="container text-center">
+            <div class="row">
+               <div class="col-md-4 web-dev ">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res"  alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-dev">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+            
+            
+            
+           
+               <div class="col-md-4 web-dev">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+            
+            
+            
+            
+             
+               <div class="col-md-4 web-dev">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-dev">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+           
+            
+           
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-design">
+                   <div class="single_img">
+                       <img src="images/web-design.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+               <div class="col-md-4 web-dev">
+                   <div class="single_img">
+                       <img src="images/web-dev.jpg" class="img-res" alt="">
+                   </div>
+               </div>
+            </div>
+            
+        </div>    
+    </section>
+    <section id="form">
+        <div class="container">
+            <div class="row">
+                <div class="form-g">
+                    
+                    <form name="1" action="">
+                      <div class="upercase"> One capital letter</div>
+                      <div class="character"> One this @#$%^&+=</div>
+                       <input type="password" id="pass">
+                       <span class="t-red"  >Week</span>
+                       <span class="t-orange" >Good</span>
+                       <span class="t-green">Strong</span>
+                       <br>
+                       <br>
+                       <br>
+                       <select name="" id="bg-color">
+                          <option value="white">Select Color</option>
+                           <option value="red">RED</option>
+                           <option value="orange">ORANGE</option>
+                           <option value="green">GREEN</option>
+                       </select>
+                       <p><span class="notifaction"></span></p>
+                       <br/><br/>
+                        <textarea  id="massage" cols="50" maxlength="100" rows="10"></textarea>
+                        <div class="remaing_text">100 character remain</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+     $(document).ready(function(){
+         
+          $(".web-design").css({
+            opacity:0.5  
+              
+          })
+         
+         $(".web-dev").css({
+              opacity:0.5  
+              
+          })
+      $(".web-design").mouseenter(function(){
+          $(this).fadeTo(100,1)
+      }) 
+         
+     $(".web-design").mouseleave(function(){
+          $(this).fadeTo(100,0.5)
+      })   
+    
+         $(".web-dev").mouseenter(function(){
+          $(this).fadeTo(100,1)
+      }) 
+         
+     $(".web-dev").mouseleave(function(){
+          $(this).fadeTo(100,0.5)
+      })   
+     
+         
+         
+         
+    
+    $("#dbclick").dblclick(function(){
+    
+     window.open("https://axiominterior.com", "hight=400", "width=400")
+    })
+    
+    $("#btn_webdesigne").click(function(){
+        
+        $(".web-design").show(5000)
+         $(".web-dev").hide(5000)
+        
+    })
+    
+         
+        $("#btn_web-devlop").click(function(){
+        
+        $(".web-design").hide(5000)
+         $(".web-dev").show(5000)
+        
+    })  
+         
+         
+          $("#btn_all").click(function(){
+        
+        $(".web-design").show(5000)
+         $(".web-dev").show(5000)
+              
+        $(".web-design").mouseenter(function(){
+            alert("MOUSE ENTER!!!")
+        })      
+        
+    })
+         $("#text_key").keyup(function(){
+             
+             alert("KEY UP!!!!!")
+         })
+         $(".character").hide()
+         $(".t-red").hide()
+         $(".t-orange").hide()
+         $(".t-green").hide()
+         
+          $("#pass").keyup(function(){
+             var pass = /[A-Z]/g
+             
+              if(this.value.match(pass)) {
+                  $(".upercase").hide()
+                  $(".character").show()
+                  
+              }
+              
+             
+              var pass= /[@#$%^&+=]/g
+              if(this.value.match(pass)) {
+                  $(".character").hide()
+              }
+              
+           var pass= $("#pass").val().length
+               
+          if(pass<6){
+                $(".t-red").show()
+                $(".t-orange").hide()
+               $(".t-green").hide()
+               $(this).addClass("red")
+               $(this).removeClass("orange")
+               $(this).removeClass("green")
+               
+           }else if(pass<10){
+               $(".t-red").hide()
+                $(".t-orange").show()
+               $(".t-green").hide()
+               $(this).removeClass("red")
+               $(this).addClass("orange")
+               $(this).removeClass("green")
+               
+           }
+              
+             else if(pass>14){
+                 $(".t-red").hide()
+                $(".t-orange").hide()
+               $(".t-green").show()
+               $(this).removeClass("red")
+               $(this).removeClass("orange")
+               $(this).addClass("green")
+               
+           }
+                
+         })
+         $("#bg-color").change(function(){
+            
+             var color=$("#bg-color option:selected").val()
+             $("body").css({
+                 backgroundColor:color
+             });
+             
+         })
+         $("#massage").keyup(function(){
+             var max=100;
+             var data= $(this).val().length;
+             var result= max- data;
+             $(".remaing_text").text("You have"+result+"remaing character ");
+         })
+    })
+    
+    </script>
+    
+   
+</body>
+</html>
